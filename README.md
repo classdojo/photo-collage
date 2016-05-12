@@ -2,7 +2,9 @@
 Combines several images into a photo mosaic.
 
 ## Installation
-`npm install --save photo-mosaic`
+`npm install --save photo-mosaic`  
+
+
 This library depends on `node-canvas`, which may require additional setup. See [their installation page](https://github.com/Automattic/node-canvas/wiki/_pages) for details.
 
 ## Usage
