@@ -1,6 +1,6 @@
 {
   "name": "photo-mosaic",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Turns an array of images into a photo mosaic",
   "main": "index.js",
   "scripts": {
