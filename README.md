@@ -1,5 +1,5 @@
 # photo-mosaic
-Creates a canvas 
+Combines several images into a photo mosaic.
 
 ## Installation
 `npm install --save photo-mosaic`.  
