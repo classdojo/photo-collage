@@ -29,8 +29,9 @@ const options = {
   sources: [
     imageBufferObject, // source can be a buffer of jpg/png data
     canvasObject, // source can be a canvas object
-    "http://myurl.com/image.jpg", // sources can be a url string
-    "./localfile.png" // sources can be a file path
+    "http://myurl.com/image.jpg", // source can be a url string
+    "./localfile.png", // source can be a relative file path
+    "~/photos/file.png" // source can be an absolute file path
   ],
   width: 2, // number of images per row
   height: 2, // number of images per column
