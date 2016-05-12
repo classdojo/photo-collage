@@ -1,16 +1,27 @@
 "use strict";
 
 const Promise  = require("bluebird");
-const request  = require("request-promise");
+const request  = require("request");
 const Canvas   = require("canvas");
 const fs       = Promise.promisifyAll(require("fs"));
+
+function downloadPhoto (uri) {
+  return new Promise((resolve, reject) => {
+    let data;
+
+    const stream = request(uri);
+    stream.on("data", (chunk) => data = data ? Buffer.concat([data, chunk]) : chunk);
+    stream.on("error", reject);
+    stream.on("end", () => resolve(data));
+  });
+}
 
 function getPhoto (src) {
   if (src instanceof Buffer) {
     return src;
   } else if (typeof src === "string") {
     if (/^http/.test(src) || /^ftp/.test(src)) {
-      return request(src)
+      return downloadPhoto(src)
         .catch(() => {throw new Error(`Could not download url source: ${src}`);});
     } else {
       return fs.readFileAsync(src)
