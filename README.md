@@ -21,7 +21,7 @@ Combines several images into a photo mosaic.
 This library depends on `node-canvas`, which may require additional setup. See [their installation page](https://github.com/Automattic/node-canvas/wiki/_pages) for details.
 
 ## Usage
-The following example creates a 2x2 mosaic from a variety of image sources.
+The following example creates a 2x3 mosaic from a variety of image sources.
 ```js
 const createMosaic = require("photo-mosaic");
 
@@ -30,10 +30,11 @@ const options = {
     imageBufferObject, // source can be a buffer of jpg/png data
     canvasObject, // source can be a canvas object
     "http://myurl.com/image.jpg", // source can be a url string
+    "https://myurl.com/image.jpg", // https/ftp is ok too.
     "./localfile.png", // source can be a relative file path
     "~/photos/file.png" // source can be an absolute file path
   ],
-  width: 2, // number of images per row
+  width: 3, // number of images per row
   height: 2, // number of images per column
   imageWidth: 350, // width of each image
   imageHeight: 250, // height of each image
