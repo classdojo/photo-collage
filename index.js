@@ -41,7 +41,7 @@ module.exports = function (options) {
   PARAMS.forEach((param) => {
     if (options[param.field]) {
       return;      
-    } else if (param.default) {
+    } else if (param.default != null) {
       options[param.field] = param.default;
     } else if (param.required) {
       throw new Error(`Missing required option: ${param.field}`);
