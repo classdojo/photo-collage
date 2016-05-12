@@ -2,7 +2,7 @@
 Combines several images into a photo mosaic.
 
 ## Installation
-`npm install --save photo-mosaic`.  
+`npm install --save photo-mosaic`
 This library depends on `node-canvas`, which may require additional setup. See [their installation page](https://github.com/Automattic/node-canvas/wiki/_pages) for details.
 
 ## Usage
@@ -19,16 +19,18 @@ const options = {
     "https://mysecureurl.com/image.jpg"
     "./localfile.png", // other strings are loaded as files
   ],
-  width: 3,
-  height: 2,
-  imageWidth: 500,
-  imageHeight: 500,
+  width: 3, // number of images per row
+  height: 2, // number of images per column
+  imageWidth: 500, // width of each image
+  imageHeight: 500, // height of each image
   backgroundColor: "#cccccc", // optional, defaults to black.
   spacing: 2, // optional: pixels between each image
 };
 
 createMosaic(options)
   .then((canvas) => {
-    canvas.jpegStream().pipe(fs.createWriteStream("myFile"))
+    const src = canvas.jpegStream();
+    const dest = fs.createWriteStream("myFile");
+    src.pipe(dest);
   });
 ```
