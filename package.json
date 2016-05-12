@@ -1,5 +1,5 @@
 {
-  "name": "@classdojo/photo-mosaic",
+  "name": "photo-mosaic",
   "version": "1.0.0",
   "description": "Turns an array of images into a photo mosaic",
   "main": "index.js",
