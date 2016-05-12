@@ -1,6 +1,18 @@
 # photo-mosaic
 Combines several images into a photo mosaic.
 
+## Example
+Source files:
+![Source file 1](https://github.com/classdojo/photo-mosaic/blob/master/img/src1.jpg?raw=true)
+![Source file 2](https://github.com/classdojo/photo-mosaic/blob/master/img/src2.jpg?raw=true)
+![Source file 3](https://github.com/classdojo/photo-mosaic/blob/master/img/src3.jpg?raw=true)
+![Source file 4](https://github.com/classdojo/photo-mosaic/blob/master/img/src4.jpg?raw=true)
+![Source file 5](https://github.com/classdojo/photo-mosaic/blob/master/img/src5.jpg?raw=true)
+![Source file 6](https://github.com/classdojo/photo-mosaic/blob/master/img/src6.jpg?raw=true)
+
+Result:
+![Result](https://github.com/classdojo/photo-mosaic/blob/master/img/result_no_spacing.png?raw=true)
+
 ## Installation
 `npm install --save photo-mosaic`  
 
