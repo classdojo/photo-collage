@@ -1,29 +1,29 @@
-# photo-mosaic
-Combines several images into a photo mosaic.
+# photo-collage
+Combines several images into a photo collage.
 
 ## Example
 
 #### Source files
-![Source file 1](https://github.com/classdojo/photo-mosaic/blob/master/img/src1.jpg?raw=true)
-![Source file 2](https://github.com/classdojo/photo-mosaic/blob/master/img/src2.jpg?raw=true)
-![Source file 3](https://github.com/classdojo/photo-mosaic/blob/master/img/src3.jpg?raw=true)
-![Source file 4](https://github.com/classdojo/photo-mosaic/blob/master/img/src4.jpg?raw=true)
-![Source file 5](https://github.com/classdojo/photo-mosaic/blob/master/img/src5.jpg?raw=true)
-![Source file 6](https://github.com/classdojo/photo-mosaic/blob/master/img/src6.jpg?raw=true)
+![Source file 1](https://github.com/classdojo/photo-collage/blob/master/img/src1.jpg?raw=true)
+![Source file 2](https://github.com/classdojo/photo-collage/blob/master/img/src2.jpg?raw=true)
+![Source file 3](https://github.com/classdojo/photo-collage/blob/master/img/src3.jpg?raw=true)
+![Source file 4](https://github.com/classdojo/photo-collage/blob/master/img/src4.jpg?raw=true)
+![Source file 5](https://github.com/classdojo/photo-collage/blob/master/img/src5.jpg?raw=true)
+![Source file 6](https://github.com/classdojo/photo-collage/blob/master/img/src6.jpg?raw=true)
 
 #### Result
-![Result](https://github.com/classdojo/photo-mosaic/blob/master/img/result_no_spacing.png?raw=true)
+![Result](https://github.com/classdojo/photo-collage/blob/master/img/result_no_spacing.png?raw=true)
 
 ## Installation
-`npm install --save photo-mosaic`  
+`npm install --save photo-collage`  
 
 
 This library depends on `node-canvas`, which may require additional setup. See [their installation page](https://github.com/Automattic/node-canvas/wiki/_pages) for details.
 
 ## Usage
-The following example creates a 2x3 mosaic from a variety of image sources.
+The following example creates a 2x3 collage from a variety of image sources.
 ```js
-const createMosaic = require("photo-mosaic");
+const createCollage = require("photo-collage");
 
 const options = {
   sources: [
@@ -42,7 +42,7 @@ const options = {
   spacing: 2, // optional: pixels between each image
 };
 
-createMosaic(options)
+createCollage(options)
   .then((canvas) => {
     const src = canvas.jpegStream();
     const dest = fs.createWriteStream("myFile");

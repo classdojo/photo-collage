@@ -1,9 +1,9 @@
 "use strict";
 
-const fs             = require("fs");
-const path           = require("path");
-const bufferEqual    = require("buffer-equal");
-const createMosaic   = require("./index");
+const fs            = require("fs");
+const path          = require("path");
+const bufferEqual   = require("buffer-equal");
+const createCollage = require("./index");
 
 require("chai")
   .use(require("chai-as-promised"))
@@ -15,11 +15,11 @@ const sources = [
   "img/src2.jpg",
   path.join(__dirname, "img/src3.jpg"),
   fs.readFileSync("img/src4.jpg"),  
-  "http://github.com/classdojo/photo-mosaic/blob/master/img/src5.jpg?raw=true",
-  "https://github.com/classdojo/photo-mosaic/blob/master/img/src6.jpg?raw=true",
+  "http://github.com/classdojo/photo-collage/blob/master/img/src5.jpg?raw=true",
+  "https://github.com/classdojo/photo-collage/blob/master/img/src6.jpg?raw=true",
 ];
 
-it("generated 2x3 mosaic with no spacing matches reference", () => {
+it("2x3 collage with no spacing matches reference", () => {
   const options = {
     sources: sources,
     width: 3,
@@ -28,13 +28,13 @@ it("generated 2x3 mosaic with no spacing matches reference", () => {
     imageHeight: 250,
   };
 
-  return createMosaic(options)
+  return createCollage(options)
     .then((canvas) => canvas.toBuffer())
     .then((buffer) => bufferEqual(buffer, fs.readFileSync("./img/result_no_spacing.png")))
     .should.eventually.equal(true);
 });
 
-it("generated 2x3 mosaic with spacing matches reference", () => {
+it("2x3 collage with spacing matches reference", () => {
   const options = {
     sources: sources,
     width: 3,
@@ -45,7 +45,7 @@ it("generated 2x3 mosaic with spacing matches reference", () => {
     spacing: 2,
   };
 
-  return createMosaic(options)
+  return createCollage(options)
     .then((canvas) => canvas.toBuffer())
     .then((buffer) => bufferEqual(buffer, fs.readFileSync("./img/result_with_spacing.png")))
     .should.eventually.equal(true);

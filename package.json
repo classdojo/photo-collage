@@ -1,17 +1,18 @@
 {
-  "name": "photo-mosaic",
+  "name": "photo-collage",
   "version": "1.0.3",
-  "description": "Turns an array of images into a photo mosaic",
+  "description": "Turns an array of images into a photo collage",
   "main": "index.js",
   "scripts": {
     "test": "mocha test.js --timeout 10000"
   },
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com/classdojo/photo-mosaic.git"
+    "url": "git+ssh://git@github.com/classdojo/photo-collage.git"
   },
   "keywords": [
     "photo",
+    "image",
     "mosaic",
     "collage",
     "canvas",
@@ -20,9 +21,9 @@
   "author": "Peter Hayes",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/classdojo/photo-mosaic/issues"
+    "url": "https://github.com/classdojo/photo-collage/issues"
   },
-  "homepage": "https://github.com/classdojo/photo-mosaic#readme",
+  "homepage": "https://github.com/classdojo/photo-collage#readme",
   "dependencies": {
     "bluebird": "^3.3.5",
     "canvas": "1.3.15",
