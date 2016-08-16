@@ -18,7 +18,7 @@ Combines several images into a photo collage.
 ![Result](https://github.com/classdojo/photo-collage/blob/master/img/result_no_spacing.png?raw=true)
 
 ## Installation
-`npm install --save photo-collage-with-text`  
+`npm install --save photo-collage`  
 
 
 This library depends on `node-canvas`, which may require additional setup. See [their installation page](https://github.com/Automattic/node-canvas/wiki/_pages) for details.
