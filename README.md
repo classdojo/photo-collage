@@ -1,6 +1,3 @@
-## Disclaimer
-Forked from https://github.com/classdojo/photo-collage (`npm i photo-collage`)
-
 # photo-collage
 Combines several images into a photo collage.
 
