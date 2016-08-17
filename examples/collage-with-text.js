@@ -13,7 +13,7 @@ const options = {
   height: 2, // number of images per column
   imageWidth: 350, // width of each image
   imageHeight: 250, // height of each image
-  // backgroundColor: "#cccccc", // optional, defaults to #eeeeee.
+  backgroundColor: "#cccccc", // optional, defaults to #eeeeee.
   spacing: 2, // optional: pixels between each image
   lines: [
     {font: "", color: "", text: "Sometimes we want to find out when a single one time event has"},
