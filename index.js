@@ -86,7 +86,7 @@ module.exports = function (options) {
   const headerHeight = (options.header || {}).height || 0;
   const canvasWidth = options.width * options.imageWidth + (options.width - 1) * (options.spacing);
   const canvasHeight = headerHeight  + options.height * options.imageHeight + (options.height - 1) * (options.spacing) + (options.textStyle.height || 200);
-  const canvas = new Canvas(canvasWidth, canvasHeight);
+  const canvas = Canvas.createCanvas(canvasWidth, canvasHeight);
 
   const ctx = canvas.getContext("2d");
   ctx.fillStyle = options.backgroundColor;
