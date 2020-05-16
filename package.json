@@ -26,7 +26,7 @@
   "homepage": "https://github.com/classdojo/photo-collage#readme",
   "dependencies": {
     "bluebird": "^3.3.5",
-    "canvas": "^1.3.15",
+    "canvas": "^2.6.1",
     "request": "^2.72.0"
   },
   "devDependencies": {

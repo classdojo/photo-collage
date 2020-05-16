@@ -2,8 +2,8 @@
 
 const Promise  = require("bluebird");
 const request  = require("request");
-const Canvas   = require("canvas");
 const fs       = Promise.promisifyAll(require("fs"));
+const { createCanvas, Canvas, Image } = require("canvas");
 
 function downloadPhoto (uri) {
   return new Promise((resolve, reject) => {
@@ -86,7 +86,7 @@ module.exports = function (options) {
   const headerHeight = (options.header || {}).height || 0;
   const canvasWidth = options.width * options.imageWidth + (options.width - 1) * (options.spacing);
   const canvasHeight = headerHeight  + options.height * options.imageHeight + (options.height - 1) * (options.spacing) + (options.textStyle.height || 200);
-  const canvas = new Canvas(canvasWidth, canvasHeight);
+  const canvas = createCanvas(canvasWidth, canvasHeight);
 
   const ctx = canvas.getContext("2d");
   ctx.fillStyle = options.backgroundColor;
@@ -103,7 +103,7 @@ module.exports = function (options) {
     .each((photoBuffer, i) => {
       if (i >= maxImages) return;
 
-      const img = new Canvas.Image();
+      const img = new Image();
       img.src = photoBuffer;
 
       if ((options.header || {}).image) { // only for header
